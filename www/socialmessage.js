@@ -6,7 +6,7 @@ var SocialMessage = function () {
 
 var allActivityTypes = ["PostToFacebook", "PostToTwitter", "PostToWeibo", "Message", "Mail", "Print", "CopyToPasteboard", "AssignToContact", "SaveToCameraRoll", "AddToReadingList", "PostToFlickr", "PostToVimeo", "TencentWeibo", "AirDrop"];
 
-SocialMessage.prototype.send = function (message, onSuccess, onError) {
+SocialMessage.prototype.send = function (config, onSuccess, onError) {
   if ( !config ) return;
   if ( typeof (config.activityTypes) === 'undefined' || config.activityTypes === null || config.activityTypes.length === 0 ) {
     config.activityTypes = allActivityTypes;
